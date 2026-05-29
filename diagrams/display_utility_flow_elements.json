@@ -1,0 +1,1579 @@
+[
+  {
+    "type": "cameraUpdate",
+    "width": 1600,
+    "height": 1200,
+    "x": 0,
+    "y": 0
+  },
+  {
+    "type": "rectangle",
+    "id": "canvas_background",
+    "x": 38,
+    "y": 38,
+    "width": 1524,
+    "height": 1128,
+    "backgroundColor": "#ffffff",
+    "strokeColor": "#adb5bd",
+    "fillStyle": "solid",
+    "strokeWidth": 2,
+    "roughness": 1,
+    "roundness": {
+      "type": 3
+    }
+  },
+  {
+    "type": "text",
+    "id": "title",
+    "x": 80,
+    "y": 68,
+    "text": "Classroom Display Utility Flow",
+    "fontSize": 34,
+    "strokeColor": "#1e1e1e"
+  },
+  {
+    "type": "text",
+    "id": "subtitle",
+    "x": 82,
+    "y": 112,
+    "text": "From display discovery to safe classroom presets, then verification and fallback.",
+    "fontSize": 18,
+    "strokeColor": "#5f6368"
+  },
+  {
+    "type": "rectangle",
+    "id": "discovery_panel",
+    "x": 78,
+    "y": 155,
+    "width": 365,
+    "height": 640,
+    "backgroundColor": "#f8f9fa",
+    "strokeColor": "#dee2e6",
+    "fillStyle": "solid",
+    "strokeWidth": 2,
+    "roughness": 1,
+    "roundness": {
+      "type": 3
+    }
+  },
+  {
+    "type": "text",
+    "id": "discovery_panel_title",
+    "x": 102,
+    "y": 173,
+    "text": "1. Discover",
+    "fontSize": 22,
+    "strokeColor": "#1e1e1e"
+  },
+  {
+    "type": "text",
+    "id": "discovery_panel_subtitle",
+    "x": 102,
+    "y": 207,
+    "text": "Build enough context before changing displays.",
+    "fontSize": 15,
+    "strokeColor": "#5f6368"
+  },
+  {
+    "type": "arrow",
+    "id": "discovery_panel_divider",
+    "x": 100,
+    "y": 241,
+    "width": 321,
+    "height": 0,
+    "points": [
+      [
+        0,
+        0
+      ],
+      [
+        321,
+        0
+      ]
+    ],
+    "endArrowhead": null,
+    "strokeColor": "#ced4da",
+    "strokeWidth": 2,
+    "roughness": 1
+  },
+  {
+    "type": "rectangle",
+    "id": "topology_panel",
+    "x": 475,
+    "y": 155,
+    "width": 370,
+    "height": 735,
+    "backgroundColor": "#f8f9fa",
+    "strokeColor": "#dee2e6",
+    "fillStyle": "solid",
+    "strokeWidth": 2,
+    "roughness": 1,
+    "roundness": {
+      "type": 3
+    }
+  },
+  {
+    "type": "text",
+    "id": "topology_panel_title",
+    "x": 499,
+    "y": 173,
+    "text": "2. Classify",
+    "fontSize": 22,
+    "strokeColor": "#1e1e1e"
+  },
+  {
+    "type": "text",
+    "id": "topology_panel_subtitle",
+    "x": 499,
+    "y": 207,
+    "text": "Branch by active display count.",
+    "fontSize": 15,
+    "strokeColor": "#5f6368"
+  },
+  {
+    "type": "arrow",
+    "id": "topology_panel_divider",
+    "x": 497,
+    "y": 241,
+    "width": 326,
+    "height": 0,
+    "points": [
+      [
+        0,
+        0
+      ],
+      [
+        326,
+        0
+      ]
+    ],
+    "endArrowhead": null,
+    "strokeColor": "#ced4da",
+    "strokeWidth": 2,
+    "roughness": 1
+  },
+  {
+    "type": "rectangle",
+    "id": "preset_panel",
+    "x": 875,
+    "y": 155,
+    "width": 645,
+    "height": 735,
+    "backgroundColor": "#f8f9fa",
+    "strokeColor": "#dee2e6",
+    "fillStyle": "solid",
+    "strokeWidth": 2,
+    "roughness": 1,
+    "roundness": {
+      "type": 3
+    }
+  },
+  {
+    "type": "text",
+    "id": "preset_panel_title",
+    "x": 899,
+    "y": 173,
+    "text": "3. Preset Logic",
+    "fontSize": 22,
+    "strokeColor": "#1e1e1e"
+  },
+  {
+    "type": "text",
+    "id": "preset_panel_subtitle",
+    "x": 899,
+    "y": 207,
+    "text": "Each preset has a constrained behavior.",
+    "fontSize": 15,
+    "strokeColor": "#5f6368"
+  },
+  {
+    "type": "arrow",
+    "id": "preset_panel_divider",
+    "x": 897,
+    "y": 241,
+    "width": 601,
+    "height": 0,
+    "points": [
+      [
+        0,
+        0
+      ],
+      [
+        601,
+        0
+      ]
+    ],
+    "endArrowhead": null,
+    "strokeColor": "#ced4da",
+    "strokeWidth": 2,
+    "roughness": 1
+  },
+  {
+    "type": "rectangle",
+    "id": "verify_panel",
+    "x": 475,
+    "y": 920,
+    "width": 1045,
+    "height": 205,
+    "backgroundColor": "#f8f9fa",
+    "strokeColor": "#dee2e6",
+    "fillStyle": "solid",
+    "strokeWidth": 2,
+    "roughness": 1,
+    "roundness": {
+      "type": 3
+    }
+  },
+  {
+    "type": "text",
+    "id": "verify_panel_title",
+    "x": 499,
+    "y": 938,
+    "text": "4. Apply and Verify",
+    "fontSize": 22,
+    "strokeColor": "#1e1e1e"
+  },
+  {
+    "type": "text",
+    "id": "verify_panel_subtitle",
+    "x": 499,
+    "y": 972,
+    "text": "Change state, re-scan, and explain the outcome plainly.",
+    "fontSize": 15,
+    "strokeColor": "#5f6368"
+  },
+  {
+    "type": "arrow",
+    "id": "verify_panel_divider",
+    "x": 497,
+    "y": 1006,
+    "width": 1001,
+    "height": 0,
+    "points": [
+      [
+        0,
+        0
+      ],
+      [
+        1001,
+        0
+      ]
+    ],
+    "endArrowhead": null,
+    "strokeColor": "#ced4da",
+    "strokeWidth": 2,
+    "roughness": 1
+  },
+  {
+    "type": "ellipse",
+    "id": "open_utility",
+    "x": 128,
+    "y": 230,
+    "width": 265,
+    "height": 74,
+    "backgroundColor": "#a5d8ff",
+    "strokeColor": "#1e1e1e",
+    "fillStyle": "solid",
+    "strokeWidth": 2,
+    "roughness": 1.5,
+    "label": {
+      "text": "User opens\ndisplay utility",
+      "fontSize": 18,
+      "strokeColor": "#1e1e1e"
+    }
+  },
+  {
+    "type": "rectangle",
+    "id": "scan_displays",
+    "x": 128,
+    "y": 334,
+    "width": 265,
+    "height": 74,
+    "backgroundColor": "#a5d8ff",
+    "strokeColor": "#1e1e1e",
+    "fillStyle": "hachure",
+    "strokeWidth": 2,
+    "roughness": 1.5,
+    "roundness": {
+      "type": 3
+    },
+    "label": {
+      "text": "Scan current\ndisplays",
+      "fontSize": 18,
+      "strokeColor": "#1e1e1e"
+    }
+  },
+  {
+    "type": "rectangle",
+    "id": "build_inventory",
+    "x": 128,
+    "y": 438,
+    "width": 265,
+    "height": 84,
+    "backgroundColor": "#c3fae8",
+    "strokeColor": "#1e1e1e",
+    "fillStyle": "hachure",
+    "strokeWidth": 2,
+    "roughness": 1.5,
+    "roundness": {
+      "type": 3
+    },
+    "label": {
+      "text": "Build display\ninventory",
+      "fontSize": 18,
+      "strokeColor": "#1e1e1e"
+    }
+  },
+  {
+    "type": "rectangle",
+    "id": "inventory_details",
+    "x": 105,
+    "y": 562,
+    "width": 312,
+    "height": 175,
+    "backgroundColor": "#c3fae8",
+    "strokeColor": "#0ca678",
+    "fillStyle": "solid",
+    "strokeWidth": 2,
+    "roughness": 1,
+    "roundness": {
+      "type": 3
+    },
+    "label": {
+      "text": "Inventory captures:\nDisplay name\nDisplay ID / UUID if available\nCurrent + available modes\nAspect ratio\nBuilt-in vs external\nClassroom display ranking",
+      "fontSize": 15,
+      "strokeColor": "#1e1e1e"
+    }
+  },
+  {
+    "type": "arrow",
+    "id": "a_open_scan",
+    "x": 260.5,
+    "y": 304,
+    "width": 0,
+    "height": 30,
+    "points": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        30
+      ]
+    ],
+    "endArrowhead": "arrow",
+    "strokeColor": "#495057",
+    "strokeWidth": 2,
+    "roughness": 1,
+    "startBinding": {
+      "elementId": "open_utility",
+      "fixedPoint": [
+        0.5,
+        1
+      ]
+    },
+    "endBinding": {
+      "elementId": "scan_displays",
+      "fixedPoint": [
+        0.5,
+        0
+      ]
+    }
+  },
+  {
+    "type": "arrow",
+    "id": "a_scan_inventory",
+    "x": 260.5,
+    "y": 408,
+    "width": 0,
+    "height": 30,
+    "points": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        30
+      ]
+    ],
+    "endArrowhead": "arrow",
+    "strokeColor": "#495057",
+    "strokeWidth": 2,
+    "roughness": 1,
+    "startBinding": {
+      "elementId": "scan_displays",
+      "fixedPoint": [
+        0.5,
+        1
+      ]
+    },
+    "endBinding": {
+      "elementId": "build_inventory",
+      "fixedPoint": [
+        0.5,
+        0
+      ]
+    }
+  },
+  {
+    "type": "arrow",
+    "id": "a_inventory_details",
+    "x": 260.5,
+    "y": 522,
+    "width": 0.5,
+    "height": 40,
+    "points": [
+      [
+        0,
+        0
+      ],
+      [
+        0.5,
+        40
+      ]
+    ],
+    "endArrowhead": "arrow",
+    "strokeColor": "#495057",
+    "strokeWidth": 2,
+    "roughness": 1,
+    "startBinding": {
+      "elementId": "build_inventory",
+      "fixedPoint": [
+        0.5,
+        1
+      ]
+    },
+    "endBinding": {
+      "elementId": "inventory_details",
+      "fixedPoint": [
+        0.5,
+        0
+      ]
+    }
+  },
+  {
+    "type": "diamond",
+    "id": "display_count",
+    "x": 520,
+    "y": 330,
+    "width": 280,
+    "height": 195,
+    "backgroundColor": "#ffc9c9",
+    "strokeColor": "#1e1e1e",
+    "fillStyle": "solid",
+    "strokeWidth": 2,
+    "roughness": 1.5,
+    "label": {
+      "text": "How many active\ndisplays?",
+      "fontSize": 18,
+      "strokeColor": "#1e1e1e"
+    }
+  },
+  {
+    "type": "rectangle",
+    "id": "one_display",
+    "x": 522,
+    "y": 215,
+    "width": 278,
+    "height": 86,
+    "backgroundColor": "#ffc9c9",
+    "strokeColor": "#e03131",
+    "fillStyle": "solid",
+    "strokeWidth": 2,
+    "roughness": 1,
+    "roundness": {
+      "type": 3
+    },
+    "label": {
+      "text": "1 display\nShow safe message\nNo display changes applied",
+      "fontSize": 16,
+      "strokeColor": "#1e1e1e"
+    }
+  },
+  {
+    "type": "rectangle",
+    "id": "two_displays",
+    "x": 498,
+    "y": 585,
+    "width": 326,
+    "height": 125,
+    "backgroundColor": "#ffec99",
+    "strokeColor": "#1e1e1e",
+    "fillStyle": "hachure",
+    "strokeWidth": 2,
+    "roughness": 1.5,
+    "roundness": {
+      "type": 3
+    },
+    "label": {
+      "text": "2 displays\nBuilt-in Mac display\nOne external display\nEnable 2-display presets",
+      "fontSize": 16,
+      "strokeColor": "#1e1e1e"
+    }
+  },
+  {
+    "type": "rectangle",
+    "id": "three_plus_displays",
+    "x": 498,
+    "y": 744,
+    "width": 326,
+    "height": 122,
+    "backgroundColor": "#d0bfff",
+    "strokeColor": "#1e1e1e",
+    "fillStyle": "hachure",
+    "strokeWidth": 2,
+    "roughness": 1.5,
+    "roundness": {
+      "type": 3
+    },
+    "label": {
+      "text": "3+ displays\nBuilt-in Mac display\nExternal candidates\nBest external source selected\nEnable classroom presets",
+      "fontSize": 15,
+      "strokeColor": "#1e1e1e"
+    }
+  },
+  {
+    "type": "arrow",
+    "id": "a_inventory_to_count",
+    "x": 393,
+    "y": 480,
+    "width": 127,
+    "height": -52.5,
+    "points": [
+      [
+        0,
+        0
+      ],
+      [
+        69,
+        0
+      ],
+      [
+        127,
+        -52.5
+      ]
+    ],
+    "endArrowhead": "arrow",
+    "strokeColor": "#495057",
+    "strokeWidth": 2,
+    "roughness": 1,
+    "startBinding": {
+      "elementId": "build_inventory",
+      "fixedPoint": [
+        1,
+        0.5
+      ]
+    },
+    "endBinding": {
+      "elementId": "display_count",
+      "fixedPoint": [
+        0,
+        0.5
+      ]
+    }
+  },
+  {
+    "type": "arrow",
+    "id": "a_count_one",
+    "x": 660,
+    "y": 330,
+    "width": 1,
+    "height": -29,
+    "points": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        -29
+      ]
+    ],
+    "endArrowhead": "arrow",
+    "strokeColor": "#c92a2a",
+    "strokeWidth": 2,
+    "roughness": 1,
+    "startBinding": {
+      "elementId": "display_count",
+      "fixedPoint": [
+        0.5,
+        0
+      ]
+    },
+    "endBinding": {
+      "elementId": "one_display",
+      "fixedPoint": [
+        0.5,
+        1
+      ]
+    }
+  },
+  {
+    "type": "arrow",
+    "id": "a_count_two",
+    "x": 660,
+    "y": 525,
+    "width": 1,
+    "height": 60,
+    "points": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        60
+      ]
+    ],
+    "endArrowhead": "arrow",
+    "strokeColor": "#495057",
+    "strokeWidth": 2,
+    "roughness": 1,
+    "startBinding": {
+      "elementId": "display_count",
+      "fixedPoint": [
+        0.5,
+        1
+      ]
+    },
+    "endBinding": {
+      "elementId": "two_displays",
+      "fixedPoint": [
+        0.5,
+        0
+      ]
+    }
+  },
+  {
+    "type": "arrow",
+    "id": "a_count_three",
+    "x": 744,
+    "y": 495.75,
+    "width": -83,
+    "height": 248.25,
+    "points": [
+      [
+        0,
+        0
+      ],
+      [
+        91,
+        64.25
+      ],
+      [
+        91,
+        234.25
+      ],
+      [
+        -83,
+        234.25
+      ],
+      [
+        -83,
+        248.25
+      ]
+    ],
+    "endArrowhead": "arrow",
+    "strokeColor": "#495057",
+    "strokeWidth": 2,
+    "roughness": 1,
+    "startBinding": {
+      "elementId": "display_count",
+      "fixedPoint": [
+        0.8,
+        0.85
+      ]
+    },
+    "endBinding": {
+      "elementId": "three_plus_displays",
+      "fixedPoint": [
+        0.5,
+        0
+      ]
+    }
+  },
+  {
+    "type": "rectangle",
+    "id": "choose_preset",
+    "x": 940,
+    "y": 238,
+    "width": 235,
+    "height": 70,
+    "backgroundColor": "#a5d8ff",
+    "strokeColor": "#1e1e1e",
+    "fillStyle": "solid",
+    "strokeWidth": 2,
+    "roughness": 1.5,
+    "roundness": {
+      "type": 3
+    },
+    "label": {
+      "text": "User chooses\npreset",
+      "fontSize": 18,
+      "strokeColor": "#1e1e1e"
+    }
+  },
+  {
+    "type": "diamond",
+    "id": "preset_selected",
+    "x": 1102,
+    "y": 350,
+    "width": 250,
+    "height": 160,
+    "backgroundColor": "#ffec99",
+    "strokeColor": "#1e1e1e",
+    "fillStyle": "solid",
+    "strokeWidth": 2,
+    "roughness": 1.5,
+    "label": {
+      "text": "Preset\nselected",
+      "fontSize": 18,
+      "strokeColor": "#1e1e1e"
+    }
+  },
+  {
+    "type": "rectangle",
+    "id": "mirror_everything",
+    "x": 908,
+    "y": 564,
+    "width": 290,
+    "height": 160,
+    "backgroundColor": "#ffd8a8",
+    "strokeColor": "#1e1e1e",
+    "fillStyle": "hachure",
+    "strokeWidth": 2,
+    "roughness": 1.5,
+    "roundness": {
+      "type": 3
+    },
+    "label": {
+      "text": "Mirror Everything\nExternal as mirror source\nSet external as Main Display\nUse external-friendly 16:9\nAvoid built-in aspect source",
+      "fontSize": 15,
+      "strokeColor": "#1e1e1e"
+    }
+  },
+  {
+    "type": "rectangle",
+    "id": "teacher_private",
+    "x": 1218,
+    "y": 564,
+    "width": 270,
+    "height": 152,
+    "backgroundColor": "#b2f2bb",
+    "strokeColor": "#1e1e1e",
+    "fillStyle": "hachure",
+    "strokeWidth": 2,
+    "roughness": 1.5,
+    "roundness": {
+      "type": 3
+    },
+    "label": {
+      "text": "Teacher Private Mode\nBuilt-in stays private/main\nExternal display(s) show content\nMirror externals together if possible",
+      "fontSize": 15,
+      "strokeColor": "#1e1e1e"
+    }
+  },
+  {
+    "type": "rectangle",
+    "id": "extend_all",
+    "x": 1030,
+    "y": 748,
+    "width": 300,
+    "height": 108,
+    "backgroundColor": "#a5d8ff",
+    "strokeColor": "#1e1e1e",
+    "fillStyle": "hachure",
+    "strokeWidth": 2,
+    "roughness": 1.5,
+    "roundness": {
+      "type": 3
+    },
+    "label": {
+      "text": "Extend All\nKeep displays separate\nBuilt-in remains main/private\nArrange externals logically",
+      "fontSize": 15,
+      "strokeColor": "#1e1e1e"
+    }
+  },
+  {
+    "type": "rectangle",
+    "id": "extend_visibility",
+    "x": 1364,
+    "y": 748,
+    "width": 124,
+    "height": 108,
+    "backgroundColor": "#d0bfff",
+    "strokeColor": "#7048e8",
+    "fillStyle": "solid",
+    "strokeWidth": 2,
+    "roughness": 1,
+    "roundness": {
+      "type": 3
+    },
+    "label": {
+      "text": "Only shown\nfor 3+\ndisplays",
+      "fontSize": 15,
+      "strokeColor": "#1e1e1e"
+    }
+  },
+  {
+    "type": "arrow",
+    "id": "a_two_to_choose",
+    "x": 824,
+    "y": 647.5,
+    "width": 116,
+    "height": -374.5,
+    "points": [
+      [
+        0,
+        0
+      ],
+      [
+        51,
+        0.5
+      ],
+      [
+        51,
+        -374.5
+      ],
+      [
+        116,
+        -374.5
+      ]
+    ],
+    "endArrowhead": "arrow",
+    "strokeColor": "#495057",
+    "strokeWidth": 2,
+    "roughness": 1,
+    "startBinding": {
+      "elementId": "two_displays",
+      "fixedPoint": [
+        1,
+        0.5
+      ]
+    },
+    "endBinding": {
+      "elementId": "choose_preset",
+      "fixedPoint": [
+        0,
+        0.5
+      ]
+    }
+  },
+  {
+    "type": "arrow",
+    "id": "a_three_to_choose",
+    "x": 824,
+    "y": 805,
+    "width": 116,
+    "height": -532,
+    "points": [
+      [
+        0,
+        0
+      ],
+      [
+        68,
+        0
+      ],
+      [
+        68,
+        -532
+      ],
+      [
+        116,
+        -532
+      ]
+    ],
+    "endArrowhead": "arrow",
+    "strokeColor": "#495057",
+    "strokeWidth": 2,
+    "roughness": 1,
+    "startBinding": {
+      "elementId": "three_plus_displays",
+      "fixedPoint": [
+        1,
+        0.5
+      ]
+    },
+    "endBinding": {
+      "elementId": "choose_preset",
+      "fixedPoint": [
+        0,
+        0.5
+      ]
+    }
+  },
+  {
+    "type": "arrow",
+    "id": "a_choose_selected",
+    "x": 1175,
+    "y": 273,
+    "width": -73,
+    "height": 157,
+    "points": [
+      [
+        0,
+        0
+      ],
+      [
+        -73,
+        157
+      ]
+    ],
+    "endArrowhead": "arrow",
+    "strokeColor": "#495057",
+    "strokeWidth": 2,
+    "roughness": 1,
+    "startBinding": {
+      "elementId": "choose_preset",
+      "fixedPoint": [
+        1,
+        0.5
+      ]
+    },
+    "endBinding": {
+      "elementId": "preset_selected",
+      "fixedPoint": [
+        0,
+        0.5
+      ]
+    }
+  },
+  {
+    "type": "arrow",
+    "id": "a_selected_mirror",
+    "x": 1172,
+    "y": 510,
+    "width": -119,
+    "height": 54,
+    "points": [
+      [
+        0,
+        0
+      ],
+      [
+        -119,
+        54
+      ]
+    ],
+    "endArrowhead": "arrow",
+    "strokeColor": "#495057",
+    "strokeWidth": 2,
+    "roughness": 1,
+    "startBinding": {
+      "elementId": "preset_selected",
+      "fixedPoint": [
+        0.28,
+        1
+      ]
+    },
+    "endBinding": {
+      "elementId": "mirror_everything",
+      "fixedPoint": [
+        0.5,
+        0
+      ]
+    }
+  },
+  {
+    "type": "arrow",
+    "id": "a_selected_teacher",
+    "x": 1294.5,
+    "y": 510,
+    "width": 58.5,
+    "height": 54,
+    "points": [
+      [
+        0,
+        0
+      ],
+      [
+        58.5,
+        54
+      ]
+    ],
+    "endArrowhead": "arrow",
+    "strokeColor": "#495057",
+    "strokeWidth": 2,
+    "roughness": 1,
+    "startBinding": {
+      "elementId": "preset_selected",
+      "fixedPoint": [
+        0.77,
+        1
+      ]
+    },
+    "endBinding": {
+      "elementId": "teacher_private",
+      "fixedPoint": [
+        0.5,
+        0
+      ]
+    }
+  },
+  {
+    "type": "arrow",
+    "id": "a_selected_extend",
+    "x": 1147,
+    "y": 510,
+    "width": 33,
+    "height": 238,
+    "points": [
+      [
+        0,
+        0
+      ],
+      [
+        33,
+        20
+      ],
+      [
+        33,
+        238
+      ],
+      [
+        33,
+        238
+      ]
+    ],
+    "endArrowhead": "arrow",
+    "strokeColor": "#495057",
+    "strokeWidth": 2,
+    "roughness": 1,
+    "startBinding": {
+      "elementId": "preset_selected",
+      "fixedPoint": [
+        0.18,
+        1
+      ]
+    },
+    "endBinding": {
+      "elementId": "extend_all",
+      "fixedPoint": [
+        0.5,
+        0
+      ]
+    }
+  },
+  {
+    "type": "arrow",
+    "id": "a_extend_visibility",
+    "x": 1330,
+    "y": 802,
+    "width": 34,
+    "height": 0,
+    "points": [
+      [
+        0,
+        0
+      ],
+      [
+        34,
+        0
+      ]
+    ],
+    "endArrowhead": "arrow",
+    "strokeColor": "#7048e8",
+    "strokeWidth": 2,
+    "roughness": 1,
+    "strokeStyle": "dashed",
+    "startBinding": {
+      "elementId": "extend_all",
+      "fixedPoint": [
+        1,
+        0.5
+      ]
+    },
+    "endBinding": {
+      "elementId": "extend_visibility",
+      "fixedPoint": [
+        0,
+        0.5
+      ]
+    }
+  },
+  {
+    "type": "rectangle",
+    "id": "apply_command",
+    "x": 540,
+    "y": 990,
+    "width": 225,
+    "height": 72,
+    "backgroundColor": "#ffec99",
+    "strokeColor": "#1e1e1e",
+    "fillStyle": "hachure",
+    "strokeWidth": 2,
+    "roughness": 1.5,
+    "roundness": {
+      "type": 3
+    },
+    "label": {
+      "text": "Apply display\ncommand",
+      "fontSize": 18,
+      "strokeColor": "#1e1e1e"
+    }
+  },
+  {
+    "type": "rectangle",
+    "id": "rescan_after",
+    "x": 812,
+    "y": 990,
+    "width": 225,
+    "height": 72,
+    "backgroundColor": "#c3fae8",
+    "strokeColor": "#1e1e1e",
+    "fillStyle": "hachure",
+    "strokeWidth": 2,
+    "roughness": 1.5,
+    "roundness": {
+      "type": 3
+    },
+    "label": {
+      "text": "Re-scan displays\nafter change",
+      "fontSize": 18,
+      "strokeColor": "#1e1e1e"
+    }
+  },
+  {
+    "type": "diamond",
+    "id": "result_matches",
+    "x": 1090,
+    "y": 950,
+    "width": 220,
+    "height": 132,
+    "backgroundColor": "#ffc9c9",
+    "strokeColor": "#1e1e1e",
+    "fillStyle": "solid",
+    "strokeWidth": 2,
+    "roughness": 1.5,
+    "label": {
+      "text": "Did result match\nexpected state?",
+      "fontSize": 17,
+      "strokeColor": "#1e1e1e"
+    }
+  },
+  {
+    "type": "rectangle",
+    "id": "success_message",
+    "x": 1360,
+    "y": 936,
+    "width": 130,
+    "height": 70,
+    "backgroundColor": "#b2f2bb",
+    "strokeColor": "#1e1e1e",
+    "fillStyle": "solid",
+    "strokeWidth": 2,
+    "roughness": 1.5,
+    "roundness": {
+      "type": 3
+    },
+    "label": {
+      "text": "Show success\nmessage",
+      "fontSize": 16,
+      "strokeColor": "#1e1e1e"
+    }
+  },
+  {
+    "type": "rectangle",
+    "id": "warning_message",
+    "x": 1338,
+    "y": 1042,
+    "width": 174,
+    "height": 70,
+    "backgroundColor": "#ffc9c9",
+    "strokeColor": "#1e1e1e",
+    "fillStyle": "solid",
+    "strokeWidth": 2,
+    "roughness": 1.5,
+    "roundness": {
+      "type": 3
+    },
+    "label": {
+      "text": "Plain-language warning\nLog actual state\nSuggest fallback preset",
+      "fontSize": 14,
+      "strokeColor": "#1e1e1e"
+    }
+  },
+  {
+    "type": "arrow",
+    "id": "a_mirror_apply",
+    "x": 1053,
+    "y": 724,
+    "width": -400.5,
+    "height": 266,
+    "points": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        188
+      ],
+      [
+        -401,
+        188
+      ],
+      [
+        -400.5,
+        266
+      ]
+    ],
+    "endArrowhead": "arrow",
+    "strokeColor": "#868e96",
+    "strokeWidth": 2,
+    "roughness": 1,
+    "strokeStyle": "dashed",
+    "startBinding": {
+      "elementId": "mirror_everything",
+      "fixedPoint": [
+        0.5,
+        1
+      ]
+    },
+    "endBinding": {
+      "elementId": "apply_command",
+      "fixedPoint": [
+        0.5,
+        0
+      ]
+    }
+  },
+  {
+    "type": "arrow",
+    "id": "a_teacher_apply",
+    "x": 1353,
+    "y": 716,
+    "width": -700.5,
+    "height": 274,
+    "points": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        196
+      ],
+      [
+        -701,
+        196
+      ],
+      [
+        -700.5,
+        274
+      ]
+    ],
+    "endArrowhead": "arrow",
+    "strokeColor": "#868e96",
+    "strokeWidth": 2,
+    "roughness": 1,
+    "strokeStyle": "dashed",
+    "startBinding": {
+      "elementId": "teacher_private",
+      "fixedPoint": [
+        0.5,
+        1
+      ]
+    },
+    "endBinding": {
+      "elementId": "apply_command",
+      "fixedPoint": [
+        0.5,
+        0
+      ]
+    }
+  },
+  {
+    "type": "arrow",
+    "id": "a_extend_apply",
+    "x": 1180,
+    "y": 856,
+    "width": -527.5,
+    "height": 134,
+    "points": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        56
+      ],
+      [
+        -528,
+        56
+      ],
+      [
+        -527.5,
+        134
+      ]
+    ],
+    "endArrowhead": "arrow",
+    "strokeColor": "#868e96",
+    "strokeWidth": 2,
+    "roughness": 1,
+    "strokeStyle": "dashed",
+    "startBinding": {
+      "elementId": "extend_all",
+      "fixedPoint": [
+        0.5,
+        1
+      ]
+    },
+    "endBinding": {
+      "elementId": "apply_command",
+      "fixedPoint": [
+        0.5,
+        0
+      ]
+    }
+  },
+  {
+    "type": "arrow",
+    "id": "a_apply_rescan",
+    "x": 765,
+    "y": 1026,
+    "width": 47,
+    "height": 0,
+    "points": [
+      [
+        0,
+        0
+      ],
+      [
+        47,
+        0
+      ]
+    ],
+    "endArrowhead": "arrow",
+    "strokeColor": "#495057",
+    "strokeWidth": 2,
+    "roughness": 1,
+    "startBinding": {
+      "elementId": "apply_command",
+      "fixedPoint": [
+        1,
+        0.5
+      ]
+    },
+    "endBinding": {
+      "elementId": "rescan_after",
+      "fixedPoint": [
+        0,
+        0.5
+      ]
+    }
+  },
+  {
+    "type": "arrow",
+    "id": "a_rescan_match",
+    "x": 1037,
+    "y": 1026,
+    "width": 53,
+    "height": -10,
+    "points": [
+      [
+        0,
+        0
+      ],
+      [
+        53,
+        -10
+      ]
+    ],
+    "endArrowhead": "arrow",
+    "strokeColor": "#495057",
+    "strokeWidth": 2,
+    "roughness": 1,
+    "startBinding": {
+      "elementId": "rescan_after",
+      "fixedPoint": [
+        1,
+        0.5
+      ]
+    },
+    "endBinding": {
+      "elementId": "result_matches",
+      "fixedPoint": [
+        0,
+        0.5
+      ]
+    }
+  },
+  {
+    "type": "arrow",
+    "id": "a_match_success",
+    "x": 1310,
+    "y": 1000.16,
+    "width": 50,
+    "height": -29.159999999999968,
+    "points": [
+      [
+        0,
+        0
+      ],
+      [
+        50,
+        -29.159999999999968
+      ]
+    ],
+    "endArrowhead": "arrow",
+    "strokeColor": "#2b8a3e",
+    "strokeWidth": 2,
+    "roughness": 1,
+    "startBinding": {
+      "elementId": "result_matches",
+      "fixedPoint": [
+        1,
+        0.38
+      ]
+    },
+    "endBinding": {
+      "elementId": "success_message",
+      "fixedPoint": [
+        0,
+        0.5
+      ]
+    },
+    "label": {
+      "text": "Yes",
+      "fontSize": 16
+    }
+  },
+  {
+    "type": "arrow",
+    "id": "a_match_warning",
+    "x": 1310,
+    "y": 1050.32,
+    "width": 28,
+    "height": 26.680000000000064,
+    "points": [
+      [
+        0,
+        0
+      ],
+      [
+        28,
+        26.680000000000064
+      ]
+    ],
+    "endArrowhead": "arrow",
+    "strokeColor": "#c92a2a",
+    "strokeWidth": 2,
+    "roughness": 1,
+    "startBinding": {
+      "elementId": "result_matches",
+      "fixedPoint": [
+        1,
+        0.76
+      ]
+    },
+    "endBinding": {
+      "elementId": "warning_message",
+      "fixedPoint": [
+        0,
+        0.5
+      ]
+    },
+    "label": {
+      "text": "No",
+      "fontSize": 16
+    }
+  },
+  {
+    "type": "rectangle",
+    "id": "legend_decision",
+    "x": 96,
+    "y": 842,
+    "width": 120,
+    "height": 42,
+    "backgroundColor": "#ffc9c9",
+    "strokeColor": "#1e1e1e",
+    "fillStyle": "solid",
+    "strokeWidth": 2,
+    "roughness": 1.5,
+    "roundness": {
+      "type": 3
+    },
+    "label": {
+      "text": "Decision",
+      "fontSize": 15,
+      "strokeColor": "#1e1e1e"
+    }
+  },
+  {
+    "type": "rectangle",
+    "id": "legend_action",
+    "x": 236,
+    "y": 842,
+    "width": 120,
+    "height": 42,
+    "backgroundColor": "#a5d8ff",
+    "strokeColor": "#1e1e1e",
+    "fillStyle": "hachure",
+    "strokeWidth": 2,
+    "roughness": 1.5,
+    "roundness": {
+      "type": 3
+    },
+    "label": {
+      "text": "Action",
+      "fontSize": 15,
+      "strokeColor": "#1e1e1e"
+    }
+  },
+  {
+    "type": "rectangle",
+    "id": "legend_safe",
+    "x": 96,
+    "y": 900,
+    "width": 120,
+    "height": 42,
+    "backgroundColor": "#ffc9c9",
+    "strokeColor": "#1e1e1e",
+    "fillStyle": "solid",
+    "strokeWidth": 2,
+    "roughness": 1.5,
+    "roundness": {
+      "type": 3
+    },
+    "label": {
+      "text": "Safe stop",
+      "fontSize": 15,
+      "strokeColor": "#1e1e1e"
+    }
+  },
+  {
+    "type": "rectangle",
+    "id": "legend_success",
+    "x": 236,
+    "y": 900,
+    "width": 120,
+    "height": 42,
+    "backgroundColor": "#b2f2bb",
+    "strokeColor": "#1e1e1e",
+    "fillStyle": "solid",
+    "strokeWidth": 2,
+    "roughness": 1.5,
+    "roundness": {
+      "type": 3
+    },
+    "label": {
+      "text": "Success",
+      "fontSize": 15,
+      "strokeColor": "#1e1e1e"
+    }
+  },
+  {
+    "type": "text",
+    "id": "legend_note",
+    "x": 96,
+    "y": 965,
+    "text": "Dashed arrows converge\nall preset paths into apply.",
+    "fontSize": 15,
+    "strokeColor": "#5f6368"
+  }
+]
