@@ -1,5 +1,7 @@
 # HBCSD Classroom Display Tool
 
+![Classroom Display Tool Logo](assets/macdisplayutilityapp.png)
+
 A local macOS utility for classroom MacBooks that lets teachers switch between
 safe display presets without opening raw Terminal commands or manually
 rebuilding display layouts in System Settings.
