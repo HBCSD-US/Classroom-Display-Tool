@@ -1,7 +1,5 @@
 # HBCSD Classroom Display Tool
 
-![Classroom Display Tool Logo](assets/macdisplayutilityapp.png)
-
 A local macOS utility for classroom MacBooks that lets teachers switch between
 safe display presets without opening raw Terminal commands or manually
 rebuilding display layouts in System Settings.
@@ -17,6 +15,9 @@ The tool supports Apple Silicon and Intel Macs and bundles the required
   only two displays are connected.
 - Refreshes when displays are connected, disconnected, or when the app becomes
   active.
+- Opens the macOS Screen Mirroring menu when a connected classroom panel is
+  waiting for the teacher to choose Mirror before macOS reports it as an active
+  display.
 - Logs display detection and apply results for IT troubleshooting.
 
 ## Teacher Presets

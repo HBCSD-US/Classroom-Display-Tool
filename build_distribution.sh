@@ -1,7 +1,7 @@
 #!/bin/sh
 set -eu
 
-VERSION="${VERSION:-2.8}"
+VERSION="${VERSION:-2.9}"
 APP_BUNDLE_NAME="HBCSD Classroom Display Tool.app"
 EXECUTABLE_NAME="HBCSD Classroom Display Tool"
 IDENTIFIER="org.hbcsd.classroom-display-tool"
@@ -102,6 +102,8 @@ write_info_plist() {
   <string>$MIN_MACOS_VERSION</string>
   <key>NSHighResolutionCapable</key>
   <true/>
+  <key>NSAppleEventsUsageDescription</key>
+  <string>HBCSD Classroom Display Tool opens the macOS Screen Mirroring menu so teachers can connect a classroom display.</string>
 </dict>
 </plist>
 EOF

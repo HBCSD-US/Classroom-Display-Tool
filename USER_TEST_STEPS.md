@@ -13,7 +13,8 @@ utility before or after installing it.
 5. Confirm the connected external display names appear near the top of the app.
 6. Click `Refresh` and confirm the app still shows the correct connected
    external display names.
-7. Click `Display Settings` and confirm macOS Display Settings opens.
+7. Click `Display Settings` and confirm macOS Display Settings opens when an
+   external display is active.
 8. Choose one of the visual display mode cards.
 9. Confirm the card gets a light blue background, blue outline, and `ACTIVE NOW`
    badge, and the displays changed as expected.
@@ -21,14 +22,15 @@ utility before or after installing it.
 
 ## Option 2: Installer Package Test
 
-1. Download or receive `HBCSD-Classroom-Display-Tool-2.8.pkg`.
+1. Download or receive `HBCSD-Classroom-Display-Tool-2.9.pkg`.
 2. Double-click the package.
 3. Follow the installer prompts.
 4. Open `/Applications/HBCSD Classroom Display Tool.app`.
 5. Confirm the connected external display names appear near the top of the app.
 6. Click `Refresh` and confirm the app still shows the correct connected
    external display names.
-7. Click `Display Settings` and confirm macOS Display Settings opens.
+7. Click `Display Settings` and confirm macOS Display Settings opens when an
+   external display is active.
 8. Choose one of the visual display mode cards.
 9. Confirm the card gets a light blue background, blue outline, and `ACTIVE NOW`
    badge, and the displays changed as expected.
@@ -42,7 +44,22 @@ utility before or after installing it.
 2. Open `HBCSD Classroom Display Tool.app`.
 3. Confirm the app says only one display is connected.
 4. Confirm no display mode cards are shown and no display change is attempted.
-5. Click `Refresh` and confirm the app still shows no display mode cards.
+5. Confirm the app shows an `Open Screen Mirroring` option instead of sending
+   the teacher to Display Settings.
+6. Click `Refresh` and confirm the app still shows no display mode cards.
+
+### Connected Panel Waiting for Screen Mirroring
+
+1. Connect an interactive flat panel or classroom display that shows a message
+   asking the teacher to choose Mirror or Extend from Screen Mirroring.
+2. Open `HBCSD Classroom Display Tool.app`.
+3. Confirm the app still reports one active display, shows no display mode
+   cards, and shows `Open Screen Mirroring`.
+4. Click `Open Screen Mirroring`.
+5. Confirm the macOS Screen Mirroring menu opens from Control Center.
+6. Choose the classroom display, then choose Mirror.
+7. Confirm the app refreshes to the normal two-display preset list. If macOS is
+   slow to report the display, click `Refresh` and confirm the same result.
 
 ### 2 Displays: Built-In + One External
 

@@ -26,12 +26,22 @@ The top of the app lists the currently connected external displays. The
 display list and available mode cards refresh automatically when macOS reports
 that displays were connected or disconnected, and they refresh again when the
 app becomes active. The `Refresh` button manually re-scans displays if a
-classroom cable, projector, or Apple TV takes longer to settle. The `Display
-Settings` shortcut opens macOS Display Settings for additional manual display
-changes.
+classroom cable, projector, or Apple TV takes longer to settle. When macOS sees
+an active external display, the `Display Settings` shortcut opens macOS Display
+Settings for additional manual display changes.
 
-If only one display is connected, the app shows a helpful message and does not
-offer display mode cards.
+If only one display is active, the app shows a helpful message and does not
+offer display mode cards. If a classroom panel is physically connected but says
+to choose Mirror or Extend from Screen Mirroring, the app shows an `Open Screen
+Mirroring` button. That button opens the Screen Mirroring menu in Control
+Center so the teacher can choose the classroom display and choose Mirror. Once
+macOS reports the display, the app refreshes and shows the normal display mode
+cards.
+
+Depending on district privacy settings, macOS may ask for permission before the
+app can open the Screen Mirroring menu automatically. If that is blocked, the
+teacher can still open Control Center manually, choose `Screen Mirroring`, and
+choose the classroom display.
 
 ## Expected Preset Behavior
 
@@ -102,7 +112,7 @@ Run:
 This creates:
 
 - `dist/HBCSD-Classroom-Display-Tool.zip`
-- `dist/HBCSD-Classroom-Display-Tool-2.8.pkg`
+- `dist/HBCSD-Classroom-Display-Tool-2.9.pkg`
 
 Use the zip for a quick no-admin launch. Use the package when you want a cleaner
 install into `/Applications/HBCSD Classroom Display Tool.app`.

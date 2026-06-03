@@ -694,6 +694,12 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         contentStack.addArrangedSubview(topology)
         fillStackWidth(topology)
 
+        if state.displayCount < 2 {
+            let recovery = screenMirroringRecoveryView()
+            contentStack.addArrangedSubview(recovery)
+            fillStackWidth(recovery)
+        }
+
         if state.presets.isEmpty {
             let emptyState = emptyStateView(message: state.message)
             contentStack.addArrangedSubview(emptyState)
@@ -818,41 +824,54 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         separator.wantsLayer = true
         separator.layer?.backgroundColor = AppPalette.separator.cgColor
 
-        let settingsButton = NSButton(title: "Display Settings", target: self, action: #selector(openDisplaySettings(_:)))
-        settingsButton.translatesAutoresizingMaskIntoConstraints = false
-        settingsButton.isBordered = false
-        settingsButton.image = NSImage(systemSymbolName: "gearshape", accessibilityDescription: "Display Settings")
-        settingsButton.imagePosition = .imageLeading
-        settingsButton.font = .systemFont(ofSize: 14, weight: .semibold)
-        settingsButton.contentTintColor = AppPalette.accentBlue
-        settingsButton.attributedTitle = NSAttributedString(
-            string: "Display Settings",
-            attributes: [
-                .foregroundColor: AppPalette.accentBlue,
-                .font: NSFont.systemFont(ofSize: 14, weight: .semibold)
-            ]
-        )
-        settingsButton.setContentHuggingPriority(.required, for: .horizontal)
-        settingsButton.setContentCompressionResistancePriority(.required, for: .horizontal)
+        func makeActionButton(
+            title: String,
+            systemSymbolName: String,
+            accessibilityDescription: String,
+            action: Selector
+        ) -> NSButton {
+            let button = NSButton(title: title, target: self, action: action)
+            button.translatesAutoresizingMaskIntoConstraints = false
+            button.isBordered = false
+            button.image = NSImage(systemSymbolName: systemSymbolName, accessibilityDescription: accessibilityDescription)
+            button.imagePosition = .imageLeading
+            button.font = .systemFont(ofSize: 14, weight: .semibold)
+            button.contentTintColor = AppPalette.accentBlue
+            button.attributedTitle = NSAttributedString(
+                string: title,
+                attributes: [
+                    .foregroundColor: AppPalette.accentBlue,
+                    .font: NSFont.systemFont(ofSize: 14, weight: .semibold)
+                ]
+            )
+            button.setContentHuggingPriority(.required, for: .horizontal)
+            button.setContentCompressionResistancePriority(.required, for: .horizontal)
+            return button
+        }
 
-        let refreshButton = NSButton(title: "Refresh", target: self, action: #selector(refreshDisplays(_:)))
-        refreshButton.translatesAutoresizingMaskIntoConstraints = false
-        refreshButton.isBordered = false
-        refreshButton.image = NSImage(systemSymbolName: "arrow.clockwise", accessibilityDescription: "Refresh")
-        refreshButton.imagePosition = .imageLeading
-        refreshButton.font = .systemFont(ofSize: 14, weight: .semibold)
-        refreshButton.contentTintColor = AppPalette.accentBlue
-        refreshButton.attributedTitle = NSAttributedString(
-            string: "Refresh",
-            attributes: [
-                .foregroundColor: AppPalette.accentBlue,
-                .font: NSFont.systemFont(ofSize: 14, weight: .semibold)
-            ]
+        let refreshButton = makeActionButton(
+            title: "Refresh",
+            systemSymbolName: "arrow.clockwise",
+            accessibilityDescription: "Refresh",
+            action: #selector(refreshDisplays(_:))
         )
-        refreshButton.setContentHuggingPriority(.required, for: .horizontal)
-        refreshButton.setContentCompressionResistancePriority(.required, for: .horizontal)
+        let settingsButton = makeActionButton(
+            title: "Display Settings",
+            systemSymbolName: "gearshape",
+            accessibilityDescription: "Display Settings",
+            action: #selector(openDisplaySettings(_:))
+        )
+        let screenMirroringButton = makeActionButton(
+            title: "Screen Mirroring",
+            systemSymbolName: "rectangle.on.rectangle",
+            accessibilityDescription: "Screen Mirroring",
+            action: #selector(openScreenMirroring(_:))
+        )
 
-        let actionStack = NSStackView(views: [refreshButton, settingsButton])
+        let actionViews = state.displayCount < 2
+            ? [refreshButton, screenMirroringButton]
+            : [refreshButton, settingsButton]
+        let actionStack = NSStackView(views: actionViews)
         actionStack.translatesAutoresizingMaskIntoConstraints = false
         actionStack.orientation = .horizontal
         actionStack.alignment = .centerY
@@ -928,6 +947,77 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         return container
     }
 
+    private func screenMirroringRecoveryView() -> NSView {
+        let container = NSView()
+        container.translatesAutoresizingMaskIntoConstraints = false
+        container.wantsLayer = true
+        container.layer?.cornerRadius = 8
+        container.layer?.borderWidth = 1
+        container.layer?.borderColor = AppPalette.accentBlue.withAlphaComponent(0.35).cgColor
+        container.layer?.backgroundColor = AppPalette.selectedBackground.cgColor
+
+        let icon = NSImageView()
+        icon.translatesAutoresizingMaskIntoConstraints = false
+        icon.image = NSImage(systemSymbolName: "rectangle.on.rectangle", accessibilityDescription: "Screen Mirroring")
+        icon.contentTintColor = AppPalette.accentBlue
+        icon.symbolConfiguration = NSImage.SymbolConfiguration(pointSize: 26, weight: .semibold)
+
+        let titleLabel = NSTextField(labelWithString: "Panel Waiting for Screen Mirroring?")
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.font = .systemFont(ofSize: 18, weight: .bold)
+        titleLabel.textColor = AppPalette.primaryText
+        titleLabel.lineBreakMode = .byWordWrapping
+        titleLabel.maximumNumberOfLines = 2
+
+        let bodyLabel = NSTextField(labelWithString: "If the classroom panel says to choose Mirror or Extend from Screen Mirroring, open Screen Mirroring and choose the classroom display. After macOS connects it, this app will show the display modes.")
+        bodyLabel.translatesAutoresizingMaskIntoConstraints = false
+        bodyLabel.font = .systemFont(ofSize: 14)
+        bodyLabel.textColor = AppPalette.primaryText
+        bodyLabel.lineBreakMode = .byWordWrapping
+        bodyLabel.maximumNumberOfLines = 4
+
+        let textStack = NSStackView(views: [titleLabel, bodyLabel])
+        textStack.translatesAutoresizingMaskIntoConstraints = false
+        textStack.orientation = .vertical
+        textStack.alignment = .leading
+        textStack.spacing = 6
+        textStack.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
+
+        let button = NSButton(title: "Open Screen Mirroring", target: self, action: #selector(openScreenMirroring(_:)))
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.bezelStyle = .rounded
+        button.controlSize = .large
+        button.font = .systemFont(ofSize: 14, weight: .semibold)
+        button.image = NSImage(systemSymbolName: "rectangle.on.rectangle", accessibilityDescription: "Open Screen Mirroring")
+        button.imagePosition = .imageLeading
+        button.contentTintColor = AppPalette.accentBlue
+        button.setContentHuggingPriority(.required, for: .horizontal)
+        button.setContentCompressionResistancePriority(.required, for: .horizontal)
+
+        container.addSubview(icon)
+        container.addSubview(textStack)
+        container.addSubview(button)
+
+        NSLayoutConstraint.activate([
+            container.heightAnchor.constraint(greaterThanOrEqualToConstant: 138),
+
+            icon.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: 24),
+            icon.topAnchor.constraint(equalTo: container.topAnchor, constant: 24),
+            icon.widthAnchor.constraint(equalToConstant: 34),
+            icon.heightAnchor.constraint(equalToConstant: 34),
+
+            textStack.leadingAnchor.constraint(equalTo: icon.trailingAnchor, constant: 18),
+            textStack.topAnchor.constraint(equalTo: container.topAnchor, constant: 22),
+            textStack.bottomAnchor.constraint(lessThanOrEqualTo: container.bottomAnchor, constant: -22),
+            textStack.trailingAnchor.constraint(lessThanOrEqualTo: button.leadingAnchor, constant: -24),
+
+            button.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: -24),
+            button.centerYAnchor.constraint(equalTo: container.centerYAnchor)
+        ])
+
+        return container
+    }
+
     private func loadingView(message: String) -> NSView {
         let container = NSView()
         container.wantsLayer = true
@@ -968,6 +1058,75 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         }
 
         workspace.open(URL(fileURLWithPath: "/System/Library/PreferencePanes/Displays.prefPane"))
+    }
+
+    @objc private func openScreenMirroring(_ sender: Any?) {
+        statusLabel?.stringValue = "Opening Screen Mirroring..."
+        statusLabel?.isHidden = false
+
+        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+            let result = Self.openScreenMirroringMenu()
+
+            DispatchQueue.main.async {
+                guard let self else { return }
+
+                if result.succeeded {
+                    self.statusLabel?.stringValue = "Screen Mirroring is open. Choose the classroom display, then choose Mirror."
+                    self.statusLabel?.isHidden = false
+                    self.scheduleDisplayRefresh(after: 4.0)
+                } else {
+                    self.statusLabel?.stringValue = "Open Control Center > Screen Mirroring, then choose the classroom display."
+                    self.statusLabel?.isHidden = false
+                }
+            }
+        }
+    }
+
+    private static func openScreenMirroringMenu() -> (succeeded: Bool, output: String) {
+        let scriptLines = [
+            "tell application \"System Events\"",
+            "    if not (exists process \"ControlCenter\") then return \"not_found\"",
+            "    tell process \"ControlCenter\"",
+            "        repeat with menuBar in menu bars",
+            "            repeat with menuItem in UI elements of menuBar",
+            "                try",
+            "                    if (description of menuItem as text) is \"Screen Mirroring\" then",
+            "                        click menuItem",
+            "                        return \"opened\"",
+            "                    end if",
+            "                end try",
+            "            end repeat",
+            "        end repeat",
+            "    end tell",
+            "end tell",
+            "return \"not_found\""
+        ]
+
+        let process = Process()
+        let outputPipe = Pipe()
+        let errorPipe = Pipe()
+
+        process.executableURL = URL(fileURLWithPath: "/usr/bin/osascript")
+        process.arguments = scriptLines.flatMap { ["-e", $0] }
+        process.standardOutput = outputPipe
+        process.standardError = errorPipe
+
+        do {
+            try process.run()
+            process.waitUntilExit()
+        } catch {
+            return (false, error.localizedDescription)
+        }
+
+        let outputData = outputPipe.fileHandleForReading.readDataToEndOfFile()
+        let errorData = errorPipe.fileHandleForReading.readDataToEndOfFile()
+        let output = String(data: outputData, encoding: .utf8) ?? ""
+        let errorOutput = String(data: errorData, encoding: .utf8) ?? ""
+        let combinedOutput = [output, errorOutput]
+            .filter { !$0.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }
+            .joined(separator: "\n")
+
+        return (process.terminationStatus == 0 && output.contains("opened"), combinedOutput)
     }
 
     private func handlePresetKeyboardEvent(_ event: NSEvent) -> Bool {
